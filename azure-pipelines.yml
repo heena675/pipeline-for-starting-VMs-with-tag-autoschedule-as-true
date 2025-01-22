@@ -1,0 +1,10 @@
+trigger: none
+pool: Azure Pipelines
+steps:
+  - task: AzureCLI@2
+    inputs:
+      azureSubscription: sanuazurecloudidwif
+      scriptType: bash
+      scriptLocation: inlineScript
+      inlineScript: |
+        az account show
