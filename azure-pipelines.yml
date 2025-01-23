@@ -1,5 +1,5 @@
 trigger: none
-pool: Azure Pipelines
+pool: Default
 steps:
   - task: AzureCLI@2
     inputs:
