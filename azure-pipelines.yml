@@ -8,3 +8,10 @@ steps:
       scriptLocation: inlineScript
       inlineScript: |
         az account show
+
+  - task: TerraformTaskV4@4
+    inputs:
+      provider: 'azurerm'
+      command: 'custom'
+      commandOptions: 'version'
+      outputTo: 'console'
