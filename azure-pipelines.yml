@@ -1,14 +1,6 @@
 trigger: none
 pool: Default
 steps:
-  - task: AzureCLI@2
-    inputs:
-      azureSubscription: sanuazurecloudidwif
-      scriptType: bash
-      scriptLocation: inlineScript
-      inlineScript: |
-        az account show
-
   - task: TerraformTaskV4@4
     inputs:
       provider: 'azurerm'
