@@ -1,9 +1,12 @@
 trigger: none
-pool: Default
+
+pool: 
+  name: Default
+
 steps:
   - task: TerraformTaskV4@4
     inputs:
-      provider: 'azurerm'
-      command: 'custom'
-      commandOptions: 'version'
-      outputTo: 'console'
+      provider: 'azurerm'          # Specifies the cloud provider (AzureRM in this case)
+      command: 'custom'           # Using a custom Terraform command
+      commandOptions: 'version'   # Running 'terraform version'
+      outputTo: 'console'         # Outputting the command's result to the console
